@@ -5,13 +5,14 @@ jobs:
     name: Compile Code
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - name: setup-gcc
       uses: egor-tensin/setup-gcc@v1
       with:
         version: latest
         platform: x64
     - name: compile-somecode
-      uses: actions/checkout@v2
+      
       run: gcc somecode.cpp -o somecode.out
     - name: commit and push
       uses: actions-js/push@master
