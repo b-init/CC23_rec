@@ -1,11 +1,11 @@
 name: Compile C++ code
-on:
-  push:
+on: [push]
 jobs:
-  setup-gcc:
+  Compile-Code:
 		runs-on: ubuntu-latest
     steps:
-    - uses: egor-tensin/setup-gcc@v1
+    - name: setup-gcc
+    	uses: egor-tensin/setup-gcc@v1
     	with:
     		version: latest
     		platform: x64
