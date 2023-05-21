@@ -1,0 +1,17 @@
+name: Compile C++ code
+on:
+  push:
+jobs:
+  compile:
+		runs-on: ubuntu-latest
+    steps:
+    - uses: egor-tensin/setup-gcc@v1
+    	with:
+    		version: latest
+    		platform: x64
+    - name: compile
+    	run: gcc somecode.cpp -o somecode.out
+    - name: commit and push
+    	uses: actions-js/push@master
+    	with:
+    		github_token: ${{ secrets.GITHUB_TOKEN }}
