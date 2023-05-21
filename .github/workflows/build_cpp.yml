@@ -2,6 +2,7 @@ name: Compile C++ code
 on: [push]
 jobs:
   Compile-Code:
+  	name: Compile Code
 		runs-on: ubuntu-latest
     steps:
     - name: setup-gcc
