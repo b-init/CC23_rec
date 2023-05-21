@@ -4,6 +4,9 @@ jobs:
   Compile-Code:
     name: Compile Code
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./
     steps:
     - name: setup-gcc
       uses: egor-tensin/setup-gcc@v1
