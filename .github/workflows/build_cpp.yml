@@ -4,9 +4,6 @@ jobs:
   Compile-Code:
     name: Compile Code
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: code
     steps:
     - name: setup-gcc
       uses: egor-tensin/setup-gcc@v1
@@ -14,7 +11,7 @@ jobs:
         version: latest
         platform: x64
     - name: compile-somecode
-      run: g++ somecode.cpp -o somecode.out
+      run: pwd
     - name: commit and push
       uses: actions-js/push@master
       with:
