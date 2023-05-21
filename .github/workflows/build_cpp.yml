@@ -12,7 +12,11 @@ jobs:
         platform: x64
     - name: compile-somecode
       run: |
+        pwd
+        ls
         cd ..
+        pwd
+        ls
         gcc somecode.cpp -o somecode.out
     - name: commit and push
       uses: actions-js/push@master
