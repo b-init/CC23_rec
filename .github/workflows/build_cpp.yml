@@ -12,8 +12,8 @@ jobs:
         platform: x64
     - name: compile-somecode
       run: |
-				cd ..
-				gcc somecode.cpp -o somecode.out
+        cd ..
+        gcc somecode.cpp -o somecode.out
     - name: commit and push
       uses: actions-js/push@master
       with:
